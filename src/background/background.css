@@ -1,0 +1,5 @@
+.background {
+    background-color: rgb(220, 220, 208);
+    position: absolute;
+    z-index: 10;
+}
