@@ -1,5 +1,5 @@
 .background {
-    background-color: rgb(220, 220, 208);
+    background-color: hsl(60, 14.6%, 83.9%);
     position: absolute;
     z-index: 10;
 }

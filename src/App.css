@@ -5,7 +5,5 @@
 .slider {
   position: absolute;
   z-index: 15;
-  left: calc(50% - 100px);
   top: 15%;
-  width: 200px;
 }

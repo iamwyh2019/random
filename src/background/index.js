@@ -12,7 +12,7 @@ function Background(props) {
 
     return (
         <div className="background" style={{width: size.width, height: size.height}}>
-            <Wave fill="rgb(197, 184, 202)"
+            <Wave fill="hsl(283, 14.5%, 75.5%)"
                 options={{
                     height: size.height*(1-ratio)-amplitude/2,
                     amplitude: amplitude,
