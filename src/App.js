@@ -4,6 +4,7 @@ import {useState} from 'react';
 import Background from './background';
 import useWindowSize from './getSize';
 import Chip from '@material-ui/core/Chip';
+import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import AddOutlinedIcon from '@material-ui/icons/AddOutlined';
 import RemoveOutlinedIcon from '@material-ui/icons/RemoveOutlined';
@@ -24,7 +25,7 @@ function App() {
     setProb(Math.max(0, prob-1));
   }
 
-  const controlFontSize = '20px';
+  const controlFontSize = '18px';
 
   const sliderLen = Math.min(320, size.width*0.8);
 
@@ -35,18 +36,18 @@ function App() {
       <div className="slider" style={{
         width: sliderLen,
         left: (size.width-sliderLen)/2 + 'px',
-        transform: 'translateY(-55px)'
+        transform: 'translateY(-45px)'
       }}>
         <IconButton onClick={minusProb}>
           <RemoveOutlinedIcon style={{fontSize: controlFontSize, color: 'black'}} />
         </IconButton>
 
         <Chip
-          label={prob}
+          label={prob + '%'}
           variant="outlined"
           style={{
             height: '45px',
-            width: '60px', 
+            width: '90px', 
             borderRadius: '22.5px',
             fontSize: controlFontSize,
             border: '1px solid black',
@@ -69,7 +70,25 @@ function App() {
           min={0}
           max={100}
           step={1}
+          style={{position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)'}}
         />
+      </div>
+
+      <div className="slider" style={{
+        width: sliderLen,
+        left: (size.width-sliderLen)/2 + 'px',
+        transform: 'translateY(45px)'
+      }}>
+        <Button variant="outlined" style={{
+          height: '45px',
+          width: '90px', 
+          borderRadius: '22.5px',
+          border: '1px solid black',
+          userSelect: 'none',
+          color: 'black',
+        }}>
+          试试手气
+        </Button>
       </div>
 
     </div>
