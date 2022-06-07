@@ -6,5 +6,13 @@
   position: absolute;
   z-index: 15;
   top: 25%;
-  height: 45px;
+  user-select: none;
+}
+
+.text {
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
